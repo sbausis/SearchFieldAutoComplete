@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4719B2E718342C740086587F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4719B2E618342C740086587F /* Cocoa.framework */; };
+		4719B2F118342C740086587F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4719B2EF18342C740086587F /* InfoPlist.strings */; };
+		4719B2F318342C740086587F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4719B2F218342C740086587F /* main.m */; };
+		4719B2F718342C740086587F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4719B2F518342C740086587F /* Credits.rtf */; };
+		4719B2FA18342C740086587F /* TZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4719B2F918342C740086587F /* TZAppDelegate.m */; };
+		4719B2FD18342C740086587F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4719B2FB18342C740086587F /* MainMenu.xib */; };
+		4719B30018342C740086587F /* SearchFieldAutoComplete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4719B2FE18342C740086587F /* SearchFieldAutoComplete.xcdatamodeld */; };
+		4719B30218342C740086587F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4719B30118342C740086587F /* Images.xcassets */; };
+		4719B30918342C740086587F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4719B30818342C740086587F /* XCTest.framework */; };
+		4719B30A18342C740086587F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4719B2E618342C740086587F /* Cocoa.framework */; };
+		4719B31218342C740086587F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4719B31018342C740086587F /* InfoPlist.strings */; };
+		4719B31418342C740086587F /* SearchFieldAutoCompleteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4719B31318342C740086587F /* SearchFieldAutoCompleteTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4719B30B18342C740086587F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4719B2DB18342C740086587F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4719B2E218342C740086587F;
+			remoteInfo = SearchFieldAutoComplete;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4719B2E318342C740086587F /* SearchFieldAutoComplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchFieldAutoComplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4719B2E618342C740086587F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4719B2E918342C740086587F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4719B2EA18342C740086587F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4719B2EB18342C740086587F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4719B2EE18342C740086587F /* SearchFieldAutoComplete-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SearchFieldAutoComplete-Info.plist"; sourceTree = "<group>"; };
+		4719B2F018342C740086587F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4719B2F218342C740086587F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4719B2F418342C740086587F /* SearchFieldAutoComplete-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SearchFieldAutoComplete-Prefix.pch"; sourceTree = "<group>"; };
+		4719B2F618342C740086587F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4719B2F818342C740086587F /* TZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZAppDelegate.h; sourceTree = "<group>"; };
+		4719B2F918342C740086587F /* TZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZAppDelegate.m; sourceTree = "<group>"; };
+		4719B2FC18342C740086587F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4719B2FF18342C740086587F /* SearchFieldAutoComplete.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchFieldAutoComplete.xcdatamodel; sourceTree = "<group>"; };
+		4719B30118342C740086587F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4719B30718342C740086587F /* SearchFieldAutoCompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchFieldAutoCompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4719B30818342C740086587F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4719B30F18342C740086587F /* SearchFieldAutoCompleteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SearchFieldAutoCompleteTests-Info.plist"; sourceTree = "<group>"; };
+		4719B31118342C740086587F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4719B31318342C740086587F /* SearchFieldAutoCompleteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFieldAutoCompleteTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4719B2E018342C740086587F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B2E718342C740086587F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4719B30418342C740086587F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B30A18342C740086587F /* Cocoa.framework in Frameworks */,
+				4719B30918342C740086587F /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4719B2DA18342C740086587F = {
+			isa = PBXGroup;
+			children = (
+				4719B2EC18342C740086587F /* SearchFieldAutoComplete */,
+				4719B30D18342C740086587F /* SearchFieldAutoCompleteTests */,
+				4719B2E518342C740086587F /* Frameworks */,
+				4719B2E418342C740086587F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4719B2E418342C740086587F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4719B2E318342C740086587F /* SearchFieldAutoComplete.app */,
+				4719B30718342C740086587F /* SearchFieldAutoCompleteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4719B2E518342C740086587F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4719B2E618342C740086587F /* Cocoa.framework */,
+				4719B30818342C740086587F /* XCTest.framework */,
+				4719B2E818342C740086587F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4719B2E818342C740086587F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4719B2E918342C740086587F /* AppKit.framework */,
+				4719B2EA18342C740086587F /* CoreData.framework */,
+				4719B2EB18342C740086587F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4719B2EC18342C740086587F /* SearchFieldAutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				4719B2F818342C740086587F /* TZAppDelegate.h */,
+				4719B2F918342C740086587F /* TZAppDelegate.m */,
+				4719B2FB18342C740086587F /* MainMenu.xib */,
+				4719B30118342C740086587F /* Images.xcassets */,
+				4719B2FE18342C740086587F /* SearchFieldAutoComplete.xcdatamodeld */,
+				4719B2ED18342C740086587F /* Supporting Files */,
+			);
+			path = SearchFieldAutoComplete;
+			sourceTree = "<group>";
+		};
+		4719B2ED18342C740086587F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4719B2EE18342C740086587F /* SearchFieldAutoComplete-Info.plist */,
+				4719B2EF18342C740086587F /* InfoPlist.strings */,
+				4719B2F218342C740086587F /* main.m */,
+				4719B2F418342C740086587F /* SearchFieldAutoComplete-Prefix.pch */,
+				4719B2F518342C740086587F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4719B30D18342C740086587F /* SearchFieldAutoCompleteTests */ = {
+			isa = PBXGroup;
+			children = (
+				4719B31318342C740086587F /* SearchFieldAutoCompleteTests.m */,
+				4719B30E18342C740086587F /* Supporting Files */,
+			);
+			path = SearchFieldAutoCompleteTests;
+			sourceTree = "<group>";
+		};
+		4719B30E18342C740086587F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4719B30F18342C740086587F /* SearchFieldAutoCompleteTests-Info.plist */,
+				4719B31018342C740086587F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4719B2E218342C740086587F /* SearchFieldAutoComplete */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4719B31718342C740086587F /* Build configuration list for PBXNativeTarget "SearchFieldAutoComplete" */;
+			buildPhases = (
+				4719B2DF18342C740086587F /* Sources */,
+				4719B2E018342C740086587F /* Frameworks */,
+				4719B2E118342C740086587F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchFieldAutoComplete;
+			productName = SearchFieldAutoComplete;
+			productReference = 4719B2E318342C740086587F /* SearchFieldAutoComplete.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4719B30618342C740086587F /* SearchFieldAutoCompleteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4719B31A18342C740086587F /* Build configuration list for PBXNativeTarget "SearchFieldAutoCompleteTests" */;
+			buildPhases = (
+				4719B30318342C740086587F /* Sources */,
+				4719B30418342C740086587F /* Frameworks */,
+				4719B30518342C740086587F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4719B30C18342C740086587F /* PBXTargetDependency */,
+			);
+			name = SearchFieldAutoCompleteTests;
+			productName = SearchFieldAutoCompleteTests;
+			productReference = 4719B30718342C740086587F /* SearchFieldAutoCompleteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4719B2DB18342C740086587F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Simon Baur";
+				TargetAttributes = {
+					4719B30618342C740086587F = {
+						TestTargetID = 4719B2E218342C740086587F;
+					};
+				};
+			};
+			buildConfigurationList = 4719B2DE18342C740086587F /* Build configuration list for PBXProject "SearchFieldAutoComplete" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4719B2DA18342C740086587F;
+			productRefGroup = 4719B2E418342C740086587F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4719B2E218342C740086587F /* SearchFieldAutoComplete */,
+				4719B30618342C740086587F /* SearchFieldAutoCompleteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4719B2E118342C740086587F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B2F118342C740086587F /* InfoPlist.strings in Resources */,
+				4719B30218342C740086587F /* Images.xcassets in Resources */,
+				4719B2F718342C740086587F /* Credits.rtf in Resources */,
+				4719B2FD18342C740086587F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4719B30518342C740086587F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B31218342C740086587F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4719B2DF18342C740086587F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B2FA18342C740086587F /* TZAppDelegate.m in Sources */,
+				4719B30018342C740086587F /* SearchFieldAutoComplete.xcdatamodeld in Sources */,
+				4719B2F318342C740086587F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4719B30318342C740086587F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4719B31418342C740086587F /* SearchFieldAutoCompleteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4719B30C18342C740086587F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4719B2E218342C740086587F /* SearchFieldAutoComplete */;
+			targetProxy = 4719B30B18342C740086587F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4719B2EF18342C740086587F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4719B2F018342C740086587F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4719B2F518342C740086587F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4719B2F618342C740086587F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4719B2FB18342C740086587F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4719B2FC18342C740086587F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4719B31018342C740086587F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4719B31118342C740086587F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4719B31518342C740086587F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4719B31618342C740086587F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4719B31818342C740086587F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SearchFieldAutoComplete/SearchFieldAutoComplete-Prefix.pch";
+				INFOPLIST_FILE = "SearchFieldAutoComplete/SearchFieldAutoComplete-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4719B31918342C740086587F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SearchFieldAutoComplete/SearchFieldAutoComplete-Prefix.pch";
+				INFOPLIST_FILE = "SearchFieldAutoComplete/SearchFieldAutoComplete-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4719B31B18342C740086587F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SearchFieldAutoComplete.app/Contents/MacOS/SearchFieldAutoComplete";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SearchFieldAutoComplete/SearchFieldAutoComplete-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SearchFieldAutoCompleteTests/SearchFieldAutoCompleteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4719B31C18342C740086587F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SearchFieldAutoComplete.app/Contents/MacOS/SearchFieldAutoComplete";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SearchFieldAutoComplete/SearchFieldAutoComplete-Prefix.pch";
+				INFOPLIST_FILE = "SearchFieldAutoCompleteTests/SearchFieldAutoCompleteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4719B2DE18342C740086587F /* Build configuration list for PBXProject "SearchFieldAutoComplete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4719B31518342C740086587F /* Debug */,
+				4719B31618342C740086587F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4719B31718342C740086587F /* Build configuration list for PBXNativeTarget "SearchFieldAutoComplete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4719B31818342C740086587F /* Debug */,
+				4719B31918342C740086587F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4719B31A18342C740086587F /* Build configuration list for PBXNativeTarget "SearchFieldAutoCompleteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4719B31B18342C740086587F /* Debug */,
+				4719B31C18342C740086587F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4719B2FE18342C740086587F /* SearchFieldAutoComplete.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4719B2FF18342C740086587F /* SearchFieldAutoComplete.xcdatamodel */,
+			);
+			currentVersion = 4719B2FF18342C740086587F /* SearchFieldAutoComplete.xcdatamodel */;
+			path = SearchFieldAutoComplete.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4719B2DB18342C740086587F /* Project object */;
+}
