@@ -7,17 +7,167 @@
 //
 
 #import "TZAppDelegate.h"
+#import "TZSuggestions.h"
 
-@implementation TZAppDelegate
+@implementation TZAppDelegate {
+    BOOL amDoingAutoComplete;
+    NSString *lastcompletionstring;
+    TZSuggestions *torrentzSuggestions;
+}
+@synthesize searchField;
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    [self getTorrentzSuggestionsFor:@"mo"];
+    
+    torrentzSuggestions = [[TZSuggestions alloc] initWithQuery:@"m"];
+    NSLog(@"suggestions: %@ %@", torrentzSuggestions.query, torrentzSuggestions.suggestions);
+    
+    torrentzSuggestions.query = @"mo";
+    NSLog(@"suggestions: %@ %@", torrentzSuggestions.query, torrentzSuggestions.suggestions);
+    
+    //[self getSuggestions:torrentzSuggestions];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.1f
+                                     target:self
+                                   selector: @selector(timerFireMethod:)
+                                   userInfo:torrentzSuggestions
+                                    repeats:NO];
+    
+    [searchField setDelegate:self];
+}
+
+- (void)getTorrentzSuggestionsFor:(NSString*)query {
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://torrentz.eu/suggestions.php?q=%@", query]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]  initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:3];
+    [request addValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/536.30.1 (KHTML, like Gecko) Version/6.0.5 Safari/536.30.1" forHTTPHeaderField:@"User-Agent"];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *json_data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    if (err == Nil) {
+        
+        NSArray *json_arr = [NSJSONSerialization JSONObjectWithData:json_data options:NSJSONReadingMutableContainers error:&err];
+        if (err == Nil) {
+            
+            NSLog(@"Query: %@", [json_arr objectAtIndex:0]);
+            
+            NSArray *suggestions = [json_arr objectAtIndex:1];
+            if ([suggestions count] > 0) {
+                
+                NSLog(@"Suggestions: %@ %lu", suggestions, (unsigned long)[suggestions count]);
+            }
+            else {
+                
+                NSLog(@"no Suggestions");
+            }
+        }
+    }
+}
+
+- (void)getSuggestions:(TZSuggestions*)tzSuggestions {
+    while (tzSuggestions.suggestions == Nil) {
+        [self performSelector:@selector(getSuggestions:) withObject:tzSuggestions afterDelay:0.35];
+    }
+    NSLog(@"suggestions: %@ %@", tzSuggestions.query, tzSuggestions.suggestions);
+}
+
+- (void)timerFireMethod:(NSTimer*)theTimer {
+    TZSuggestions *tzSuggestions = theTimer.userInfo;
+    if (tzSuggestions.suggestions == Nil) {
+        NSLog(@"timerFireMethod");
+        [NSTimer scheduledTimerWithTimeInterval:0.1f
+                                         target:self
+                                       selector: @selector(timerFireMethod:)
+                                       userInfo:tzSuggestions
+                                        repeats:NO];
+    }
+    else {
+        NSLog(@"suggestions: %@ %@", tzSuggestions.query, tzSuggestions.suggestions);
+    }
+}
+
+
+ 
+ /*
+ -(BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor {
+ NSLog(@"textShouldEndEditing %@ %@", control,fieldEditor);
+ //[fieldEditor complete:<#(id)#>]
+ return YES;
+ }
+ */
+
+/*
+ -(void)controlTextDidChange:(NSNotification *)obj {
+ 
+ NSLog(@"controlTextDidChange %@", obj);
+ if( amDoingAutoComplete ){
+ return;
+ } else {
+ amDoingAutoComplete = YES;
+ [[[obj userInfo] objectForKey:@"NSFieldEditor"] complete:nil];
+ }
+ }
+ */
+-(void)controlTextDidChange:(NSNotification *)obj {
+    
+    NSLog(@"controlTextDidChange");
+    if([searchField.stringValue isEqualToString:lastcompletionstring]) {
+        return;
+    }
+    else if ([searchField.stringValue isEqualToString:@""]) {
+        lastcompletionstring = [searchField.stringValue copy];
+        NSLog(@"new string %@", lastcompletionstring);
+        torrentzSuggestions.query = lastcompletionstring;
+    }
+    else {
+        
+        lastcompletionstring = [searchField.stringValue copy];
+        NSLog(@"new string %@", lastcompletionstring);
+        torrentzSuggestions.query = lastcompletionstring;
+        [NSTimer scheduledTimerWithTimeInterval:0.1f
+                                         target:self
+                                       selector: @selector(completionarrive:)
+                                       userInfo:[obj userInfo]
+                                        repeats:NO];
+    }
+}
+- (void)completionarrive:(NSTimer*)theTimer {
+    if (torrentzSuggestions.suggestions == Nil) {
+        NSLog(@"completionarrive");
+        [NSTimer scheduledTimerWithTimeInterval:0.1f
+                                         target:self
+                                       selector: @selector(completionarrive:)
+                                       userInfo:theTimer.userInfo
+                                        repeats:NO];
+    }
+    else {
+        NSLog(@"suggestions: %@ %@", torrentzSuggestions.query, torrentzSuggestions.suggestions);
+        [[theTimer.userInfo objectForKey:@"NSFieldEditor"] complete:nil];
+    }
+}
+-(NSArray *)control:(NSControl *)control textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index {
+    
+    //NSLog(@"completions: %@ %@ %@ %lu %lu", control, textView, words, (unsigned long)charRange.location, (unsigned long)charRange.length);
+    NSLog(@"completions");
+    //return words;
+    return torrentzSuggestions.suggestions;
+    return [[NSArray alloc] init];
+    return [NSArray arrayWithObjects:@"hell", @"hello", nil];
+}
+
+- (IBAction)searchFieldAction:(id)sender {
+    
+    NSLog(@"searchFieldAction %@", sender);
+}
+
+
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-}
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "ch.0rca.SearchFieldAutoComplete" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory

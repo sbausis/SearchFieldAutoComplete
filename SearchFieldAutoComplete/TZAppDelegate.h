@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TZAppDelegate : NSObject <NSApplicationDelegate>
+@interface TZAppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
@@ -17,5 +17,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:(id)sender;
+
+@property (weak) IBOutlet NSTextField *searchField;
+- (IBAction)searchFieldAction:(id)sender;
 
 @end

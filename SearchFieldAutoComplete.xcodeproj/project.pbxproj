@@ -19,6 +19,7 @@
 		4719B30A18342C740086587F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4719B2E618342C740086587F /* Cocoa.framework */; };
 		4719B31218342C740086587F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4719B31018342C740086587F /* InfoPlist.strings */; };
 		4719B31418342C740086587F /* SearchFieldAutoCompleteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4719B31318342C740086587F /* SearchFieldAutoCompleteTests.m */; };
+		4719B31F18342C910086587F /* TZSuggestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4719B31E18342C910086587F /* TZSuggestions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		4719B30F18342C740086587F /* SearchFieldAutoCompleteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SearchFieldAutoCompleteTests-Info.plist"; sourceTree = "<group>"; };
 		4719B31118342C740086587F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4719B31318342C740086587F /* SearchFieldAutoCompleteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFieldAutoCompleteTests.m; sourceTree = "<group>"; };
+		4719B31D18342C910086587F /* TZSuggestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZSuggestions.h; sourceTree = "<group>"; };
+		4719B31E18342C910086587F /* TZSuggestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZSuggestions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 			children = (
 				4719B2F818342C740086587F /* TZAppDelegate.h */,
 				4719B2F918342C740086587F /* TZAppDelegate.m */,
+				4719B31D18342C910086587F /* TZSuggestions.h */,
+				4719B31E18342C910086587F /* TZSuggestions.m */,
 				4719B2FB18342C740086587F /* MainMenu.xib */,
 				4719B30118342C740086587F /* Images.xcassets */,
 				4719B2FE18342C740086587F /* SearchFieldAutoComplete.xcdatamodeld */,
@@ -259,6 +264,7 @@
 				4719B2FA18342C740086587F /* TZAppDelegate.m in Sources */,
 				4719B30018342C740086587F /* SearchFieldAutoComplete.xcdatamodeld in Sources */,
 				4719B2F318342C740086587F /* main.m in Sources */,
+				4719B31F18342C910086587F /* TZSuggestions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
