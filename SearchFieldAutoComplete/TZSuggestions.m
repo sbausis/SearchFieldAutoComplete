@@ -47,6 +47,8 @@
     //_suggestions = suggestions;
 }
 
+@synthesize _delegate;
+
 -(id)init {
     self = [super init];
     if (self) {
@@ -69,6 +71,16 @@
     if (self) {
         
         self.query = q;
+    }
+    return self;
+}
+
+-(id)initWithQuery:(NSString *)q andDelegate:(id)delegate {
+    self = [self init];
+    if (self) {
+        
+        self.query = q;
+        self._delegate = delegate;
     }
     return self;
 }
@@ -146,6 +158,9 @@
         NSString *_dataString = [NSString stringWithUTF8String:[_responseData bytes]];
         NSLog(@"dataString %lu %@ %lu", (unsigned long)[_responseData length], _dataString, (unsigned long)[_dataString length]);
         _suggestions = [[self class] getArrayFromJSONData:_responseData];
+        if (_delegate) {
+            //[_delegate performSelectorOnMainThread:@selector(gotSuggestions:) withObject: waitUntilDone:NO];
+        }
     }
 }
 

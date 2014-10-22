@@ -19,8 +19,11 @@
 - (NSArray*)suggestions;
 - (void)setSuggestions:(NSArray*)suggestions;
 
+@property id _delegate;
+
 -(id)init;
 -(id)initWithQuery:(NSString*)q;
+-(id)initWithQuery:(NSString*)q andDelegate:(id)delegate;
 
 + (NSArray*)getArrayFromJSONData:(NSData*)data;
 

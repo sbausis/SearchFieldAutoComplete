@@ -17,10 +17,10 @@
 @synthesize searchField;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
+    /*
     [self getTorrentzSuggestionsFor:@"mo"];
     
-    torrentzSuggestions = [[TZSuggestions alloc] initWithQuery:@"m"];
+    torrentzSuggestions = [[TZSuggestions alloc] initWithQuery:@""];
     NSLog(@"suggestions: %@ %@", torrentzSuggestions.query, torrentzSuggestions.suggestions);
     
     torrentzSuggestions.query = @"mo";
@@ -33,10 +33,13 @@
                                    selector: @selector(timerFireMethod:)
                                    userInfo:torrentzSuggestions
                                     repeats:NO];
+    */
+    torrentzSuggestions = [[TZSuggestions alloc] initWithQuery:@""];
+    NSLog(@"suggestions: %@ %@", torrentzSuggestions.query, torrentzSuggestions.suggestions);
     
     [searchField setDelegate:self];
 }
-
+/*
 - (void)getTorrentzSuggestionsFor:(NSString*)query {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://torrentz.eu/suggestions.php?q=%@", query]];
@@ -88,9 +91,8 @@
         NSLog(@"suggestions: %@ %@", tzSuggestions.query, tzSuggestions.suggestions);
     }
 }
+*/
 
-
- 
  /*
  -(BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor {
  NSLog(@"textShouldEndEditing %@ %@", control,fieldEditor);
@@ -111,9 +113,14 @@
  }
  }
  */
+
 -(void)controlTextDidChange:(NSNotification *)obj {
     
-    NSLog(@"controlTextDidChange");
+    NSLog(@"controlTextDidChange[%@]", obj);
+    /*if([searchField.stringValue isEqualToString:[lastcompletionstring substringToIndex:[searchField.stringValue length]]]) {
+        return;
+    }
+    else*/
     if([searchField.stringValue isEqualToString:lastcompletionstring]) {
         return;
     }
@@ -152,17 +159,18 @@
     
     //NSLog(@"completions: %@ %@ %@ %lu %lu", control, textView, words, (unsigned long)charRange.location, (unsigned long)charRange.length);
     NSLog(@"completions");
-    //return words;
+    
     return torrentzSuggestions.suggestions;
-    return [[NSArray alloc] init];
-    return [NSArray arrayWithObjects:@"hell", @"hello", nil];
 }
 
 - (IBAction)searchFieldAction:(id)sender {
     
     NSLog(@"searchFieldAction %@", sender);
 }
-
+-(void)gotSuggestions:(NSArray*)suggestions {
+    
+    NSLog(@"gotSuggestions %@", suggestions);
+}
 
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
